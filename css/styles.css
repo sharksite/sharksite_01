@@ -1,1 +1,317 @@
+@font-face {
+    font-family: "jfdot";
+    src: url(../font/jfdotfont/JF-Dot-Ayu18.ttf);
+}
 
+p, a, h1, h2, h3, h4 {
+    color: #fff;
+}
+
+.section {
+    padding: 100px 0;
+}
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 50px 0;
+    }
+}
+
+.dot {
+    font-family: "jfdot";
+}
+
+@media screen and (max-width: 768px) {
+    .sp-hide {
+        display: none!important;
+    }
+}
+@media screen and (min-width: 769px) {
+    .pc-hide {
+        display: none!important;
+    }
+}
+
+
+.hamburger {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.hamburger .btn-gNav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 24px;
+    z-index: 12;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+.hamburger .btn-gNav  {
+    margin: 0 auto;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 24px;
+}
+.hamburger .btn-gNav  a { 
+    font-size: 24px;
+}
+
+.hamburger .btn-gNav span {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 10px;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+}
+
+.hamburger .btn-gNav span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger .btn-gNav span:nth-child(2) {
+    top: 10px;
+}
+
+.hamburger .btn-gNav span:nth-child(3) {
+    top: 20px;
+}
+
+.hamburger .btn-gNav.open span:nth-child(1) {
+    background: #ffffff;
+    top: 6px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.hamburger .btn-gNav.open span:nth-child(2),
+.hamburger .btn-gNav.open span:nth-child(3) {
+    top: 6px;
+    background: #ffffff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+.btn-gNav {
+    display: none;
+}
+
+.gNav .gNav-menu {
+    display: flex;
+    justify-content: space-between;
+    gap: 0 20px;
+}
+
+.gNav .gNav-menu li {
+    margin: 0 auto;
+    padding: 0 5px;
+}
+
+@media screen and (max-width: 760px) {
+    .btn-gNav {
+        display: block;
+    }
+
+    .gNav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        font-size: 16px;
+        box-sizing: border-box;
+        z-index: 1;
+        padding-top: 50px;
+        transition: .3s;
+    }
+
+    .gNav.open {
+        right: 0;
+    }
+
+    .gNav .gNav-menu {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        flex-direction: column;
+        text-align: center;
+        /*justify-content: center;*/
+    }
+
+    .gNav .gNav-menu li {
+        width: 86%;
+        padding: 15px;
+        border-bottom: #525252 1px solid;
+    }
+
+}
+
+/* scroll down */
+.scroll-downs {
+    position: absolute;
+    right: 0;
+    bottom: 80px;
+    left: 0;
+    margin: auto;
+
+    width: 34px;
+    height: 55px;
+}
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: #fff;
+    animation-name: scroll;
+    animation-duration: 2.2s;
+    animation-timing-function: cubic-bezier(.15, .41, .69, .94);
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+/* for Scroll Fix Header */
+
+.fix-header {
+line-height: 66px;
+top: -66px;/* 上に隠す鷹さ */
+left: 0;
+width: 100%;
+margin: 0 auto;
+position: fixed;
+opacity:0;/* 	最初読み込んだときは透過 */
+z-index: 1000;/*　他のアイテムに対して最上位のレイヤーになるように */
+/*	opacity: 0; */
+background: #01479D;
+font-weight: bold;
+}
+
+
+/* side_text */
+.side_text {
+    position: absolute;
+
+    font-size: 20px;
+    font-weight: bold;
+margin: 10px;
+    
+}
+.border {
+    border-top: 1px solid #fff;
+}
+
+/* style */
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    background: #01479D;
+    width: 100%;
+}
+
+nav a {
+    color: #fff;
+}
+
+
+#kv {
+    background: url(../img/kv.png) center;
+    height: 100vh;
+}
+#kv .inner {
+    position: relative;
+    height: 100%;
+    padding: 0 80px;
+}
+
+#kv .inner .title_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+#about {
+    background: url(../img/bg_youkoso.png) center ;
+}
+
+#about .inner {
+    position: relative;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 80px;
+
+}
+
+#about .title {
+    font-size: 60px;
+    font-weight: bold;
+}
+#about .sub {
+    font-size: 30px;
+    margin: 120px 0 60px;
+}
+#about .sub2 {
+    font-size: 30px;
+    margin: 60px 0;
+}
+
+.sec_image {
+    position: absolute;
+}
+#about .sec_image {
+    width: 400px;
+    right: 0;
+    bottom: 0px;
+}
