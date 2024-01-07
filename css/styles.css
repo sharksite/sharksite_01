@@ -359,6 +359,13 @@ nav a {
     right: 0;
     bottom: 0px;
 }
+@media screen and (max-width: 768px) {
+    #about .sec_image {
+        width: 200px;
+        right: 0;
+        bottom: -90px;
+    }  
+}
 
 #learn {
     background: url(../img/bg_learn.png) center;
