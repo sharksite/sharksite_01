@@ -498,3 +498,70 @@ ul.footer_nav li:last-of-type a {
     font-size: 18px;
     margin-top: 100px;
 }
+
+
+/*========= ページトップのためのCSS ===============*/
+
+/*リンクの形状*/
+#page-top a{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 5px;
+    width: 80px;
+    height: 80px;
+    /* background: #003482; */
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase; 
+    text-decoration: none;
+    font-size:0.6rem;
+    transition:all 0.3s;
+  }
+  
+  #page-top a:hover{
+    background: #777;
+  }
+  
+  /*リンクを右下に固定*/
+  #page-top {
+    position: fixed;
+    right: 10px;
+    bottom:10px;
+    z-index: 2;
+      /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  
+  /*　上に上がる動き　*/
+  
+  #page-top.UpMove{
+    animation: UpAnime 0.5s forwards;
+  }
+  @keyframes UpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+  /*　下に下がる動き　*/
+  
+  #page-top.DownMove{
+    animation: DownAnime 0.5s forwards;
+  }
+  @keyframes DownAnime{
+    from {
+      opacity: 1;
+    transform: translateY(0);
+    }
+    to {
+      opacity: 1;
+    transform: translateY(100px);
+    }
+  }
