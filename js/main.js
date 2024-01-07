@@ -1,6 +1,7 @@
 $(function () {
 	$('.btn-gNav').on("click", function () {
     $('.gNav').toggleClass('open');  // メニューにopenクラスをつけ外しする
+    $('.btn-gNav').toggleClass('open');  // メニューにopenクラスをつけ外しする
         // メニュー項目のリンクがクリックされたときのイベント
         $('.gNav-menu a').on("click", function () {
           $('.gNav').removeClass('open');  // メニューからopenクラスを削除する
