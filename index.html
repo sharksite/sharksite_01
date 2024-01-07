@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dot Shark Gallery</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bubble.css">
 </head>
 
 <body>
     <header>
         <div class="inner">
             <!-- 固定ヘッダ表示用のブロック -->
-            <div class="fix-header">
+            <div class="fix-heade sp-hide">
                 <div class="fix-header-contents">
                     <div class="hamburger">
                         <!-- <div class="logo">LOGO</div> -->
@@ -24,11 +26,10 @@
                         </p>
                         <nav class="gNav">
                             <ul class="gNav-menu">
-                                <li><a href="#">ABOUT</a></li>
-                                <li><a href="#">CONCEPT</a></li>
-                                <li><a href="#">LEARN</a></li>
-                                <li><a href="#">GALLERY</a></li>
-                                <li><a href="#">CONTACT</a></li>
+                                <li><a href="#about">ABOUT</a></li>
+                                <li><a href="#learn">LEARN</a></li>
+                                <li><a href="#gallery">GALLERY</a></li>
+                                <li><a href="#contact">CONTACT</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -44,21 +45,20 @@
                 <nav class="gNav">
                     <ul class="gNav-menu">
                         <li><a href="#about">ABOUT</a></li>
-                        <li><a href="#">CONCEPT</a></li>
-                        <li><a href="#">LEARN</a></li>
-                        <li><a href="#">GALLERY</a></li>
-                        <li><a href="#">CONTACT</a></li>
+                        <li><a href="#learn">LEARN</a></li>
+                        <li><a href="#gallery">GALLERY</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
                     </ul>
                 </nav>
             </div>
-        <div class="side_text">
-            <img src="img/left_text.png" alt="">
-        </div>
+            <div class="side_text">
+                <img src="img/left_text.png" alt="">
+            </div>
 
         </div>
     </header>
     <main>
-        <div id="kv" class="section">
+        <div id="kv" class="section bubble-background">
             <div class="inner">
                 <!-- <div class="image_wrapper">
                     <img src="img/kv.png" alt="">
@@ -76,7 +76,7 @@
 
         </div>
         <div id="about" class="section">
-            <div class="inner">
+            <div class="inner section_inner">
                 <p class="title dot">
                     ようこそ、<br>
                     ドットシャークの世界へ
@@ -97,22 +97,34 @@
             </div>
         </div>
         <div id="learn" class="section">
-            <div class="inner">
+            <div class="inner section_inner">
                 <h2>LEARN</h2>
                 <p class="sub_title">学ぶ</p>
-                <p class="desc_text">
-                    実はあまり知られていない、サメのこと。<br>
-                    サメの生態や文化、社会問題など...<br>
-                    サメにまつわるあれこれを、<br>
-                    ドットシャークたちと学ぼう！！
-                </p>
-                <a href="#" class="button_link">
+                <div class="flex">
+                    <div class="left">
+                        <p class="desc_text">
+                            実はあまり知られていない、サメのこと。<br>
+                            サメの生態や文化、社会問題など...<br>
+                            サメにまつわるあれこれを、<br>
+                            ドットシャークたちと学ぼう！！
+                        </p>
+                        <a href="#" class="button_link sp-hide">
+                            MORE
+                        </a>
+                    </div>
+                    <div class="right">
+                        <div class="image_wrapper">
+                            <img src="img/learn.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button_link pc-hide">
                     MORE
                 </a>
             </div>
         </div>
-        <div id=" gallery" class="section">
-            <div class="inner">
+        <div id="gallery" class="section">
+            <div class="inner section_inner">
                 <h2>GALLERY</h2>
                 <p class="sub_title">図鑑</p>
                 <p class="desc_text">
@@ -127,7 +139,9 @@
                     </h3>
                     <div class="pickup_wrapper">
                         <div class="left">
-                            <img src="https://placehold.jp/600x300.png" alt="">
+                            <div class="image_wrapper">
+                                <img src="img/gal_pickup.png" alt="">
+                            </div>
                         </div>
                         <div class="right">
                             <p>
@@ -137,64 +151,86 @@
                             <a class="text_link" href="#">PRESS START! ▶︎</a>
                         </div>
                     </div>
-                    <ul>
-                        <li class="gallery_section big_shark">
+                    <h3 class="title">
+                        CATEGORY
+                    </h3>
+                    <div class="gallery_section big_shark">
+                        <a class="text_link" href="#">
                             <div class="image_wrapper">
-                                <img src="https://placehold.jp/600x300.png" alt="">
+                                <img src="img/big_shark.png" alt="">
                             </div>
-                            <a class="text_link" href="#">BIG SHARKS ▶︎</a>
-                            <div class="asirai">
+                            BIG SHARKS ▶︎
+                        </a>
+                        <!-- <div class="asirai">
                                 <img src="https://placehold.jp/300x200.png" alt="">
-                            </div>
-                        </li>
-                        <li class="gallery_section middle_shark">
-                            <div class="image_wrapper">
-                                <img src="https://placehold.jp/600x300.png" alt="">
-                            </div>
-                            <a class="text_link" href="#">MIDDLE SHARKS ▶︎</a>
-                        </li>
-                        <li class="gallery_section small_shark">
-                            <div class="image_wrapper">
-                                <img src="https://placehold.jp/600x300.png" alt="">
-                            </div>
-                            <a class="text_link" href="#">SMALL SHARKS ▶︎</a>
-                            <div class="asirai">
+                            </div> -->
+                    </div>
+                    <div class="flex">
+                        <div class="gallery_section middle_shark">
+                            <a class="text_link" href="#">
+                                <div class="image_wrapper">
+                                    <img src="img/middle_shark.png" alt="">
+                                </div>
+                                MIDDLE SHARKS ▶︎
+                            </a>
+                        </div>
+                        <div class="gallery_section small_shark">
+                            <a class="text_link" href="#">
+                                <div class="image_wrapper">
+                                    <img src="img/small_shark.png" alt="">
+                                </div>
+                                SMALL SHARKS ▶︎
+                            </a>
+                            <!-- <div class="asirai">
                                 <img src="https://placehold.jp/300x200.png" alt="">
-                            </div>
-                        </li>
-                    </ul>
+                            </div> -->
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </div>
         <div id="contact" class="section">
-            <div class="inner">
-                <h2>GALLERY</h2>
+            <div class="inner section_inner">
+                <h2>CONTACT</h2>
                 <p class="sub_title">お問い合わせ</p>
-                <p class="desc_text">
-                    Googleフォームに必要事項をご記入の上、<br>
-                    お問い合わせ下さい。
-                </p>
-                <a class="text_link" href="#">フォームはこちら ▶︎</a>
+                <div class="flex">
+                    <div class="left">
+                        <p class="desc_text">
+                            Googleフォームに必要事項をご記入の上、<br>
+                            お問い合わせ下さい。
+                        </p>
+                        <a class="text_link" href="#">フォームはこちら ▶︎</a>
+                    </div>
+                    <div class="right">
+                        <div class="image_wrapper">
+                            <img src="https://s3-alpha-sig.figma.com/img/50eb/3390/e52fc5532b3305ee28875a60e039c5e7?Expires=1705276800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=gi5dN1n-94oH9BNAN69UWniy6fDgt3ZhBZIWDF5vLXe4UAUabM4Eg2KfPtgVrx5S4pK47cenLL0NX3sGjmO~nGBCSS0K5cNHS-KaBhKlb84PcGNnnDi~lB03Rfzz5Fi2ejQmPFe51uDf3f8lZxPsWYjreZI2pmjqrTZTptnY7XgggvKvIFRjON9Dnp3nitIYt44qXjN3d9L8dY4JualKzEBL9HUU7Xij0Ee9NqgNGfXfm1MevGyfFYdmWC6DxBNUyNp-FfADyyQ~KubUeU-XCS-5dn1q01WyYZtle1iS8cdz6pLueB~SdDSIwKONV3~MQsmuOJdTtPvka5YtfEYMPw__"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+
             </div>
     </main>
-    <footer>
-        <div class="inner">
+    <footer class="">
+        <div class="inner section_inner">
             <p class="footer_title">
                 DOT SHARK GALLERY
             </p>
             <ul class="footer_nav">
-                <li><a href="#about"></a></li>
-                <li><a href="#learn"></a></li>
-                <li><a href="#gallery"></a></li>
-                <li><a href="#conatct"></a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#learn">LEARN</a></li>
+                <li><a href="#gallery">GALLRY</a></li>
+                <li><a href="#contact">CONTACT</a></li>
             </ul>
         </div>
         <p class="copyright">
             Copyright©DOT SHARK GALLERY
         </p>
     </footer>
+    <script src="intersection-observer.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/bubble.js"></script>
     <script src="js/main.js"></script>
 </body>
 
