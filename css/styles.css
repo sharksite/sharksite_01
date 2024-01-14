@@ -942,6 +942,27 @@ ul.learn_shark_wrapper li > .text_wrapper{
       transform: translateY(0);
       }
     }
+
+  /* 左から */
+
+.fadeLeft{
+    animation-name:fadeLeftAnime;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeLeftAnime{
+      from {
+        opacity: 0;
+        transform: translateX(-100vw);
+      }
+    
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
     
     
     /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
