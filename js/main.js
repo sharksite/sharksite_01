@@ -97,7 +97,7 @@ $(function () {
         // スマホビューの判定
         headerHeight = 63;
     } else if ($("body").hasClass("gallery") || $("body").hasClass("learn")) {
-        headerHeight = 123;
+        headerHeight = 144;
     } else {
         headerHeight = 67;
     }
