@@ -971,3 +971,19 @@ ul.learn_shark_wrapper li > .text_wrapper{
         opacity: 0;
     }
     
+
+    .cat_title {
+        font-size: 48px;
+    }
+
+    .category_section {
+        margin-top: 100px;
+    }
+    @media screen and (max-width: 768px) {
+        .cat_title {
+            font-size: 36px;
+        }
+        .category_section {
+            margin-top: 50px;
+        }
+    }
