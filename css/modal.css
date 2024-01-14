@@ -1,0 +1,89 @@
+/* モーダルCSS */
+.modalArea {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    /*サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+.modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 600px;
+    background-color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .modalWrapper {
+        width: 93%;
+    }
+}
+
+.closeModal {
+    position: absolute;
+    top: 1rem;
+    right: 1.3rem;
+    cursor: pointer;
+    padding: 16px;
+    color: #3558B4;
+}
+
+@media screen and (max-width: 768px) {
+    .closeModal {
+        top: -0.5%;
+        right: 2.5%;
+    }
+}
+
+
+
+
+#openModal {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+
+
+.center_text_wrapper {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+
+    max-width: 480px;
+    max-height: 356px;
+    overflow-y: scroll;
+}
+
+.center_text_wrapper p {
+    color: #333;
+    font-size: 18px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .center_text_wrapper {
+        top: 52%;
+        width: 333px;
+        max-height: 250px;
+    }
+}

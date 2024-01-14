@@ -34,6 +34,10 @@
     transition: all 400ms;
 }
 
+.underlayer .hamburger .btn-gNav {
+    top: 20px;
+}
+
 .hamburger .btn-gNav {
     margin: 0 auto;
     padding: 20px;

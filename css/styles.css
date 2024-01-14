@@ -1,8 +1,13 @@
 /* ------------------------共通css------------------------- */
 
 html {
-    scroll-behavior: smooth;
+    font-size: 62.5%;
 }
+
+body {
+    font-size: 1.4rem;
+}
+
 
 @font-face {
     font-family: "jfdot";
@@ -29,7 +34,12 @@ h4 {
     font-family: "jfdot";
 }
 
+button {
+    font-family: "jfdot";
+}
+
 @media screen and (max-width: 768px) {
+
     p,
     a,
     h1,
@@ -46,6 +56,7 @@ h2 {
     font-family: "jfdot";
     font-weight: bold;
 }
+
 @media screen and (max-width: 768px) {
     h2 {
         font-size: 46px;
@@ -62,6 +73,10 @@ h2 {
     margin-bottom: 0;
 } */
 
+img.reverse {
+    transform: scale(-1, 1);
+}
+
 .section {
     padding: 100px 0;
 }
@@ -69,6 +84,20 @@ h2 {
 @media screen and (max-width: 768px) {
     .section {
         padding: 50px 0;
+    }
+}
+
+.section.first {
+    padding-top: 0;
+}
+
+#kv.section {
+    padding: 68px 0 0;
+}
+
+@media screen and (max-width: 768px) {
+    #kv.section {
+        padding: 0px;
     }
 }
 
@@ -103,6 +132,45 @@ h2 {
     margin-bottom: 60px;
 }
 
+button {
+    position: relative;
+    padding: 10px 20px;
+    background: #40489B;
+    border: 3px solid #40489B;
+    border-radius: 2px;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 0px;
+    font-size: 20px;
+    transition: .5s;
+
+}
+button:hover {
+    background: #fff;
+    border: 3px solid #40489B;
+    color: #40489B;
+    transition: .5s;
+
+}
+
+button::after {
+    content: "";
+    background-image: url(../img/underlayer/gallery/rabuka.png);
+    background-size: 50px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: -18px;
+    right: -63px;
+    transition: .5s;
+
+}
+button:hover::after {
+    right: -43px;
+    transition: .5s;
+}
+
 a.button_link {
     display: flex;
     width: 240px;
@@ -116,6 +184,7 @@ a.button_link {
     position: relative;
     color: #333;
 }
+
 @media screen and (max-width: 768px) {
     a.button_link {
         margin: 0 auto;
@@ -175,6 +244,12 @@ a.button_link:hover {
 
     width: 34px;
     height: 55px;
+    /* margin-top: -100px;
+    margin-bottom: 46px; */
+}
+
+@media screen and (max-width: 768px) {
+    .scroll-downs {}
 }
 
 .mousey {
@@ -240,7 +315,7 @@ a.button_link:hover {
 
     font-size: 20px;
     font-weight: bold;
-    margin: 10px;
+    margin: 0 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -272,14 +347,14 @@ nav a {
 
 
 #kv {
-    background: url(../img/kv.png) center;
-    height: 100vh;
+    /* background: url(../img/kv.png) center; */
+    /* height: 100vh; */
 }
 
 #kv .inner {
     position: relative;
     height: 100%;
-    padding: 0 80px;
+    /* padding: 0 80px; */
 }
 
 #kv .inner .title_wrapper {
@@ -293,7 +368,7 @@ nav a {
 
 @media screen and (max-width: 768px) {
     #kv .inner .title_wrapper {
-        width: 80%;
+        width: 57%;
     }
 }
 
@@ -304,7 +379,7 @@ nav a {
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 90px;
 }
 
 @media screen and (max-width: 768px) {
@@ -359,12 +434,13 @@ nav a {
     right: 0;
     bottom: 0px;
 }
+
 @media screen and (max-width: 768px) {
     #about .sec_image {
         width: 200px;
         right: 0;
         bottom: -90px;
-    }  
+    }
 }
 
 #learn {
@@ -412,24 +488,32 @@ nav a {
     align-items: center;
     gap: 0 30px;
 }
+
 @media screen and (max-width: 768px) {
     .pickup_wrapper {
         flex-direction: column;
     }
+
     .pickup_wrapper .right {
         width: 100%;
     }
 }
 
+#gallery .desc_text{
+    margin-top: 60px;
+}
+
 #gallery .middle_shark {
     width: 70%;
 }
+
 @media screen and (max-width: 768px) {
     .middle_shark {
-        width: 100%!important;
+        width: 100% !important;
     }
+
     .small_shark {
-        width: 100%!important;
+        width: 100% !important;
     }
 }
 
@@ -440,6 +524,7 @@ nav a {
 #gallery .small_shark .image_wrapper {
     width: 200px;
 }
+
 @media screen and (max-width: 768px) {
     #gallery .small_shark .image_wrapper {
         width: 100px;
@@ -453,14 +538,15 @@ nav a {
 #contact .right {
     width: 50%;
 }
+
 @media screen and (max-width: 768px) {
     #contact .left {
         width: 100%;
     }
-    
+
     #contact .right {
         width: 100%;
-    } 
+    }
 }
 
 footer {
@@ -510,65 +596,357 @@ ul.footer_nav li:last-of-type a {
 /*========= ページトップのためのCSS ===============*/
 
 /*リンクの形状*/
-#page-top a{
+#page-top a {
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
     width: 80px;
     height: 80px;
     /* background: #003482; */
     color: #fff;
     text-align: center;
-    text-transform: uppercase; 
+    text-transform: uppercase;
     text-decoration: none;
-    font-size:0.6rem;
-    transition:all 0.3s;
-  }
-  
-  #page-top a:hover{
+    font-size: 0.6rem;
+    transition: all 0.3s;
+}
+
+#page-top a:hover {
     background: #777;
-  }
-  
-  /*リンクを右下に固定*/
-  #page-top {
+}
+
+/*リンクを右下に固定*/
+#page-top {
     position: fixed;
     right: 10px;
-    bottom:10px;
+    bottom: 10px;
     z-index: 2;
-      /*はじめは非表示*/
+    /*はじめは非表示*/
     opacity: 0;
     transform: translateY(100px);
-  }
-  
-  /*　上に上がる動き　*/
-  
-  #page-top.UpMove{
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
     animation: UpAnime 0.5s forwards;
-  }
-  @keyframes UpAnime{
+}
+
+@keyframes UpAnime {
     from {
-      opacity: 0;
-    transform: translateY(100px);
+        opacity: 0;
+        transform: translateY(100px);
     }
+
     to {
-      opacity: 1;
-    transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
-  /*　下に下がる動き　*/
-  
-  #page-top.DownMove{
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
     animation: DownAnime 0.5s forwards;
-  }
-  @keyframes DownAnime{
+}
+
+@keyframes DownAnime {
     from {
-      opacity: 1;
-    transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
+
     to {
-      opacity: 1;
-    transform: translateY(100px);
+        opacity: 1;
+        transform: translateY(100px);
     }
-  }
+}
+
+.underlayer h1 {
+    color: #FFF;
+    font-size: 6vw;
+    text-align: center;
+    font-weight: bold;
+}
+
+.underlayer .headding .title_wrapper {
+    position: relative;
+}
+
+@media screen and (min-width: 769px) {
+    .underlayer h1 {
+        padding: 12.8rem 0 6rem;
+    }
+}
+
+
+.underlayer .headding .title_wrapper h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.underlayer .headding .title_wrapper img {}
+
+.underlayer.gallery .section {
+    overflow: hidden;
+}
+
+
+
+.nav_anker_wrapper {
+    background: #003475;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 68px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .underlayer .nav_anker_wrapper {
+        top: 0;
+    }
+}
+
+.nav_anker_wrapper .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ul.nav_anker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 0 auto;
+    gap: 0 30px;
+}
+
+ul.nav_anker li {
+    width: 30%;
+}
+
+ul.nav_anker li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.h2_title_wrapper {
+    background: #064973;
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+}
+
+@media screen and (min-width: 769px) {
+    .h2_title_wrapper {
+        padding: 30px 90px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .h2_title_wrapper {
+        padding: 30px 16px;
+    }
+}
+
+.h2_title_wrapper .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#gallery_page p {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    #gallery_page p {
+        font-size: 24px;
+    }
+}
+
+.learn #gallery_page p.title {
+    font-size: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+#gallery_page .bg .inner {
+    position: relative;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 90px 1px;
+}
+
+@media screen and (max-width: 768px) {
+    #gallery_page .bg .inner {
+        padding: 0;
+    }
+}
+
+.bg {
+    width: 100vw;
+    margin: 0 calc(50% - 50vw);
+    padding: 0;
+}
+
+#gallery_big_sharks {
+    background: #36C8D9;
+}
+
+#gallery_middle_sharks {
+    background: #118EBF;
+}
+
+#gallery_small_sharks {
+    background: linear-gradient(180deg, #0678BF 0%, #3A5EAF 100%);
+}
+
+#gallery_small_sharks li > .image_wrapper {
+    width: 63%;
+}
+#gallery_small_sharks li > .image_wrapper.mini {
+    width: 40%;
+}
+#gallery_small_sharks li img {
+    min-width: 130px;
+}
+/* #gallery_small_sharks .text_wrapper {
+    width: 30%;
+} */
+
+ul.gallery_shark_wrapper li {
+    margin: 60px 0;
+    padding: 0 16px;
+}
+
+ul.gallery_shark_wrapper li:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 60px;
+}
+
+ul.gallery_shark_wrapper.big li .image_wrapper.right_out_monitor {
+    margin-right: calc(50% - 50vw);
+    margin-left: 4%;
+    width: 150vw;
+}
+
+ul.gallery_shark_wrapper.small li {
+    display: flex;
+    align-items: baseline;
+    margin: 60px auto;
+    justify-content: center;
+    width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+    ul.gallery_shark_wrapper.small li {
+        width: 100%;
+    }
+}
+
+ul.gallery_shark_wrapper.small li:last-child {
+    margin-bottom: 0;
+}
+
+ul.gallery_shark_wrapper.small li:nth-of-type(odd) {
+    flex-direction: row-reverse;
+}
+
+
+ul.gallery_shark_wrapper.small li .image_wrapper.mini {
+    width: 40%;
+}
+
+ul.learn_shark_wrapper li {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+    gap: 0 60px;
+}
+@media screen and (max-width: 768px) {
+    ul.learn_shark_wrapper li {
+        flex-direction: column!important;
+    }
+}
+ul.learn_shark_wrapper li:nth-of-type(even) {
+   flex-direction: row-reverse; 
+}
+
+
+
+ul.learn_shark_wrapper li > .image_wrapper{
+    width: 50%;
+}
+ul.learn_shark_wrapper li > .text_wrapper{
+    width: 50%;
+}
+@media screen and (max-width: 768px) {
+    ul.learn_shark_wrapper li > .image_wrapper{
+        width: 90%;
+    }
+    ul.learn_shark_wrapper li > .text_wrapper{
+        width: 90%;
+    } 
+}
+
+
+
+
+/* 右から */
+
+.fadeRight {
+    animation-name: fadeRightAnime;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeRightAnime {
+    from {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+  /* したから */
+
+  .fadeUp{
+    animation-name:fadeUpAnime;
+    animation-duration:2s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+    
+    
+    /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+     
+    .fadeUpTrigger{
+        opacity: 0;
+    }
+    
