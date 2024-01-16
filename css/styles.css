@@ -607,6 +607,7 @@ ul.footer_nav li:last-of-type a {
 /*リンクの形状*/
 #page-top a {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
@@ -619,10 +620,12 @@ ul.footer_nav li:last-of-type a {
     text-decoration: none;
     font-size: 0.6rem;
     transition: all 0.3s;
+    font-size: 13px;
 }
 
 #page-top a:hover {
-    background: #777;
+    /* background: #777; */
+    opacity: .9;
 }
 
 /*リンクを右下に固定*/
@@ -671,6 +674,20 @@ ul.footer_nav li:last-of-type a {
         transform: translateY(100px);
     }
 }
+
+/* 回転 */
+#page-top a:hover {
+    animation: rotate_anime 4s linear infinite;
+  }
+  @keyframes rotate_anime {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+/*  */
 
 .underlayer h1 {
     color: #FFF;
