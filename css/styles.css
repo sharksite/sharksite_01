@@ -553,22 +553,21 @@ footer {
     background: url(../img/bg_footer_pc.png) center;
     background-repeat: no-repeat;
     background-size: contain;
-    padding: 100px 30px 0px;
+    padding: 100px 30px 70px;
     position: relative;
 }
 @media screen and (max-width: 768px) {
 footer {
     background: url(../img/bg_footer_2.png);
-    background-repeat: no-repeat;
+    background-repeat: round;
     background-size: contain;
 }
 }
 
 
 .footer_title {
-    font-size: 36px;
-    text-align: center;
-    margin-bottom: 60px;
+    width: 245px;
+    margin: 60px auto;
 }
 
 ul.footer_nav {
@@ -595,10 +594,13 @@ ul.footer_nav li:last-of-type a {
 }
 
 .copyright {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     text-align: center;
     width: 100%;
     font-size: 18px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 
@@ -797,7 +799,7 @@ ul.nav_anker li a {
 }
 
 .learn #gallery_page p.title {
-    font-size: 40px;
+    font-size: 36px;
     padding-bottom: 10px;
     border-bottom: 1px solid #fff;
 }
@@ -1011,5 +1013,26 @@ ul.learn_shark_wrapper li > .text_wrapper{
         }
         .category_section {
             margin-top: 50px;
+        }
+    }
+
+    .center_text_wrapper .title {
+        font-size: 36px!important;
+    }
+    @media screen and (max-width: 768px) {
+    .center_text_wrapper .title {
+        font-size: 24px!important;
+        margin-top: 10px;
+    }
+    }
+
+    .modal_image .modal_inner {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    @media screen and (max-width: 768px) {
+        .modal_image .modal_inner {
+            width: 110px;
         }
     }
